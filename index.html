@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raut Bhojnalaya | Digital Business Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">RB</div>
+        <div>
+          <h1>Raut Bhojnalaya</h1>
+          <span>Digital Business Management</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-item active" data-page="dashboard"><span>⌂</span> Dashboard</button>
+        <button class="nav-item" data-page="sales"><span>₹</span> Daily Sales</button>
+        <button class="nav-item" data-page="expenses"><span>↘</span> Expenses</button>
+        <button class="nav-item" data-page="customers"><span>♙</span> Customers</button>
+        <button class="nav-item" data-page="analytics"><span>◫</span> Analytics</button>
+        <button class="nav-item" data-page="feedback"><span>★</span> Feedback</button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="demo-badge">PROTOTYPE MODE</div>
+        <p>Designed to replace the daily notebook with a simple digital workflow.</p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <div class="eyebrow">OWNER DASHBOARD</div>
+          <h2 id="pageTitle">Good afternoon 👋</h2>
+          <p id="pageSubtitle">Here is today's business snapshot.</p>
+        </div>
+        <div class="top-actions">
+          <button class="icon-btn" title="Notifications">♢</button>
+          <div class="owner">
+            <div class="avatar">RW</div>
+            <div><strong>Owner</strong><small>Raut Bhojnalaya</small></div>
+          </div>
+        </div>
+      </header>
+
+      <section id="dashboard" class="page active-page">
+        <div class="hero">
+          <div>
+            <span class="pill">RAUT DIGITAL DAILY REGISTER</span>
+            <h3>Know your business without opening the notebook.</h3>
+            <p>Record sales and expenses once. The dashboard turns them into monthly business insights automatically.</p>
+            <div class="hero-actions">
+              <button class="primary" onclick="openPage('sales')">+ Add today's sales</button>
+              <button class="secondary" onclick="openPage('analytics')">View insights</button>
+            </div>
+          </div>
+          <div class="hero-stat">
+            <span>Today's sales</span>
+            <strong>₹13,660</strong>
+            <small>↑ 12.4% vs yesterday</small>
+          </div>
+        </div>
+
+        <div class="kpi-grid">
+          <div class="kpi"><span>Monthly Revenue</span><strong>₹3.82L</strong><small class="positive">↑ 8.6%</small></div>
+          <div class="kpi"><span>Monthly Expenses</span><strong>₹2.18L</strong><small>Food + operations</small></div>
+          <div class="kpi"><span>Net Balance</span><strong>₹1.65L</strong><small class="positive">After recorded expenses</small></div>
+          <div class="kpi"><span>Customers</span><strong>856</strong><small>184 new · 672 returning</small></div>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <div class="card-head"><div><h4>Revenue trend</h4><p>Last 7 days</p></div><span class="mini-tag">₹84.7K</span></div>
+            <div class="chart-wrap">
+              <svg viewBox="0 0 700 240" preserveAspectRatio="none" class="line-chart">
+                <defs><linearGradient id="fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-opacity=".20"/><stop offset="100%" stop-opacity="0"/></linearGradient></defs>
+                <path d="M0,185 L100,150 L200,164 L300,104 L400,126 L500,66 L600,88 L700,38 L700,240 L0,240 Z" fill="url(#fill)"/>
+                <polyline points="0,185 100,150 200,164 300,104 400,126 500,66 600,88 700,38" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div class="chart-labels"><span>24 Sep</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30 Sep</span></div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-head"><div><h4>Today's sales mix</h4><p>By category</p></div></div>
+            <div class="donut-row">
+              <div class="donut"><div><strong>₹13.7K</strong><span>Total</span></div></div>
+              <div class="legend">
+                <div><i class="dot veg"></i><span>Veg</span><strong>54%</strong></div>
+                <div><i class="dot nonveg"></i><span>Non-veg</span><strong>36%</strong></div>
+                <div><i class="dot other"></i><span>Other</span><strong>10%</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-head"><div><h4>Payment collection</h4><p>Today</p></div></div>
+            <div class="metric-row"><span>UPI</span><strong>₹7,320</strong></div>
+            <div class="progress"><i style="width:54%"></i></div>
+            <div class="metric-row"><span>Cash</span><strong>₹5,840</strong></div>
+            <div class="progress"><i style="width:43%"></i></div>
+            <div class="metric-row"><span>Other</span><strong>₹500</strong></div>
+            <div class="progress"><i style="width:4%"></i></div>
+          </div>
+
+          <div class="card">
+            <div class="card-head"><div><h4>Customer retention</h4><p>This month</p></div></div>
+            <div class="big-number">78.5%</div>
+            <p class="muted">Returning customers</p>
+            <div class="split-stat"><span>New <b>184</b></span><span>Returning <b>672</b></span></div>
+          </div>
+
+          <div class="card">
+            <div class="card-head"><div><h4>Google presence</h4><p>Reference listing</p></div></div>
+            <div class="rating"><strong>4.3</strong><span>★</span></div>
+            <p class="muted">60 reviews</p>
+            <button class="link-btn" onclick="alert('Prototype: opens Google Business Profile')">View profile →</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="sales" class="page">
+        <div class="section-head"><div><h3>Daily Sales</h3><p>Replace the paper register with a 30-second digital entry.</p></div><button class="primary" onclick="showToast('Sales entry saved successfully')">Save today's entry</button></div>
+        <div class="form-card">
+          <div class="form-grid">
+            <label>Date<input type="date" value="2026-09-30"></label>
+            <label>Cash sales<input id="cash" type="number" value="5840"></label>
+            <label>UPI sales<input id="upi" type="number" value="7320"></label>
+            <label>Other sales<input id="other" type="number" value="500"></label>
+          </div>
+          <div class="sale-items">
+            <div class="item-row header"><span>Item</span><span>Type</span><span>Qty</span><span>Price</span><span>Total</span></div>
+            <div class="item-row"><span>Special Thali</span><span class="tag veg-tag">Veg</span><input value="28" type="number"><input value="180" type="number"><strong>₹5,040</strong></div>
+            <div class="item-row"><span>Chicken Thali</span><span class="tag nonveg-tag">Non-veg</span><input value="18" type="number"><input value="260" type="number"><strong>₹4,680</strong></div>
+            <div class="item-row"><span>Egg Thali</span><span class="tag nonveg-tag">Non-veg</span><input value="9" type="number"><input value="160" type="number"><strong>₹1,440</strong></div>
+            <div class="item-row"><span>Other</span><span class="tag other-tag">Other</span><input value="25" type="number"><input value="100" type="number"><strong>₹2,500</strong></div>
+          </div>
+          <div class="total-bar"><span>Total recorded sales</span><strong>₹13,660</strong></div>
+        </div>
+      </section>
+
+      <section id="expenses" class="page">
+        <div class="section-head"><div><h3>Expenses</h3><p>Track where the money goes and build a real monthly picture.</p></div><button class="primary" onclick="showToast('Expense added')">+ Add expense</button></div>
+        <div class="kpi-grid">
+          <div class="kpi"><span>This month</span><strong>₹2.18L</strong><small>Recorded expenses</small></div>
+          <div class="kpi"><span>Food materials</span><strong>₹1.13L</strong><small>52% of expenses</small></div>
+          <div class="kpi"><span>Operations</span><strong>₹71.8K</strong><small>Salary, gas, electricity</small></div>
+          <div class="kpi"><span>Other</span><strong>₹32.4K</strong><small>Maintenance & misc.</small></div>
+        </div>
+        <div class="card table-card">
+          <div class="card-head"><div><h4>Recent expenses</h4><p>September 2026</p></div><button class="secondary">Export</button></div>
+          <table><thead><tr><th>Date</th><th>Category</th><th>Description</th><th>Amount</th></tr></thead>
+          <tbody>
+            <tr><td>30 Sep</td><td><span class="tag">Vegetables</span></td><td>Daily market purchase</td><td>₹1,200</td></tr>
+            <tr><td>30 Sep</td><td><span class="tag">Chicken</span></td><td>Fresh stock</td><td>₹2,400</td></tr>
+            <tr><td>29 Sep</td><td><span class="tag">Gas</span></td><td>Commercial cylinder</td><td>₹600</td></tr>
+            <tr><td>28 Sep</td><td><span class="tag">Grocery</span></td><td>Rice, oil & spices</td><td>₹3,850</td></tr>
+          </tbody></table>
+        </div>
+      </section>
+
+      <section id="customers" class="page">
+        <div class="section-head"><div><h3>Customers</h3><p>Understand new, returning and regular customers without slowing down service.</p></div><button class="primary" onclick="showToast('Customer form opened')">+ Add customer</button></div>
+        <div class="kpi-grid">
+          <div class="kpi"><span>Total customers</span><strong>856</strong><small>September</small></div>
+          <div class="kpi"><span>New</span><strong>184</strong><small>21.5%</small></div>
+          <div class="kpi"><span>Returning</span><strong>672</strong><small>78.5%</small></div>
+          <div class="kpi"><span>Regular/VIP</span><strong>96</strong><small>High-frequency visitors</small></div>
+        </div>
+        <div class="card table-card">
+          <div class="card-head"><div><h4>Customer directory</h4><p>Optional customer profiles for regular visitors.</p></div><input class="search" placeholder="Search name or mobile"></div>
+          <table><thead><tr><th>Customer</th><th>Type</th><th>Visits</th><th>Last visit</th><th>Total spent</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Rahul Patil</strong><br><small>98XXXXXX42</small></td><td><span class="tag vip-tag">Regular</span></td><td>24</td><td>30 Sep</td><td>₹7,840</td></tr>
+            <tr><td><strong>Akshay Jadhav</strong><br><small>97XXXXXX18</small></td><td><span class="tag">Returning</span></td><td>11</td><td>29 Sep</td><td>₹3,420</td></tr>
+            <tr><td><strong>Neha Shinde</strong><br><small>88XXXXXX06</small></td><td><span class="tag">Returning</span></td><td>8</td><td>27 Sep</td><td>₹2,180</td></tr>
+          </tbody></table>
+        </div>
+      </section>
+
+      <section id="analytics" class="page">
+        <div class="section-head"><div><h3>Business Analytics</h3><p>Turn daily records into decisions.</p></div><button class="secondary" onclick="showToast('Report generated')">Generate monthly report</button></div>
+        <div class="grid-2">
+          <div class="card">
+            <div class="card-head"><div><h4>Revenue vs expenses</h4><p>September 2026</p></div></div>
+            <div class="bars">
+              <div class="bar-group"><div class="bar revenue" style="height:92%"></div><div class="bar expense" style="height:57%"></div><span>Week 1</span></div>
+              <div class="bar-group"><div class="bar revenue" style="height:76%"></div><div class="bar expense" style="height:48%"></div><span>Week 2</span></div>
+              <div class="bar-group"><div class="bar revenue" style="height:84%"></div><div class="bar expense" style="height:51%"></div><span>Week 3</span></div>
+              <div class="bar-group"><div class="bar revenue" style="height:98%"></div><div class="bar expense" style="height:62%"></div><span>Week 4</span></div>
+            </div>
+            <div class="bar-legend"><span><i class="sq revenue"></i> Revenue</span><span><i class="sq expense"></i> Expenses</span></div>
+          </div>
+          <div class="card">
+            <div class="card-head"><div><h4>Top selling items</h4><p>Quantity sold</p></div></div>
+            <div class="rank"><b>01</b><span>Special Thali</span><strong>318</strong></div>
+            <div class="rank"><b>02</b><span>Chicken Thali</span><strong>241</strong></div>
+            <div class="rank"><b>03</b><span>Bhakri</span><strong>206</strong></div>
+            <div class="rank"><b>04</b><span>Egg Thali</span><strong>164</strong></div>
+            <div class="rank"><b>05</b><span>Chicken</span><strong>143</strong></div>
+          </div>
+        </div>
+        <div class="insight-card"><span>💡</span><div><strong>Example insight</strong><p>Returning customers represent 78.5% of identified customers this month. The owner can use this data to understand regular demand and plan purchasing more confidently.</p></div></div>
+      </section>
+
+      <section id="feedback" class="page">
+        <div class="section-head"><div><h3>Customer Feedback</h3><p>Use a QR code to collect private feedback and invite happy customers to review publicly.</p></div><button class="primary" onclick="showToast('QR feedback link copied')">Copy QR link</button></div>
+        <div class="grid-2">
+          <div class="card feedback-card">
+            <div class="qr">QR</div>
+            <h4>Table Feedback QR</h4>
+            <p class="muted">Scan → rate food, service and cleanliness → optional comment.</p>
+            <button class="secondary" onclick="showToast('QR poster preview opened')">Preview poster</button>
+          </div>
+          <div class="card">
+            <div class="card-head"><div><h4>Average ratings</h4><p>327 responses</p></div></div>
+            <div class="rating-line"><span>Food</span><strong>4.6 ★</strong></div><div class="progress"><i style="width:92%"></i></div>
+            <div class="rating-line"><span>Service</span><strong>4.4 ★</strong></div><div class="progress"><i style="width:88%"></i></div>
+            <div class="rating-line"><span>Cleanliness</span><strong>4.2 ★</strong></div><div class="progress"><i style="width:84%"></i></div>
+            <button class="link-btn" onclick="showToast('Google review flow preview')">Open Google review flow →</button>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <span>Raut Bhojnalaya Digital Management System — Raut Brand Concept</span>
+        <span>Raut Wadewale-inspired palette • Demo figures only</span>
+      </footer>
+    </main>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
